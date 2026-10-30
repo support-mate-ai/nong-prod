@@ -1,0 +1,12 @@
+:root {
+  --bg: #FFFFFF;
+  --soft: #F6F6F8;
+  --ink: #0B0B0D;
+  --muted: #5C606A;
+  --line: #E7E8EC;
+  --red: #F02D2D;
+  --red-deep: #C71F1F;
+  --tint: #FFF1F1;
+  --display: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  color-scheme: light;
+}

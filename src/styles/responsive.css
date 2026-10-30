@@ -1,0 +1,10 @@
+@media (max-width: 900px) {
+  .links { display: none; }
+  section { padding-block: 68px; }
+  .hero .wrap, .how .wrap, .launch .wrap { grid-template-columns: 1fr; }
+  .cards, .prov .grid, .models, .plans { grid-template-columns: 1fr; }
+  .plan.pop { order: -1; }
+  .subscription-head { align-items: flex-start; flex-direction: column; }
+  .stage { max-width: 380px; }
+  .model p { min-height: 0; }
+}

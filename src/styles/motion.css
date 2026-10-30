@@ -1,0 +1,37 @@
+/* Keyframes, reveal-on-scroll and reduced motion. */
+@keyframes float { 50% { transform: translate(var(--fx, 0), -12px); } }
+.logo-card { --fx: 0; }
+.logo-card { animation-name: floatc; }
+@keyframes floatc {
+  0%, 100% { transform: translate(-50%, -50%); }
+  50% { transform: translate(-50%, calc(-50% - 12px)); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 50% { transform: scale(1.5); opacity: .5; } }
+@keyframes draw { from { transform: scaleX(0); } }
+@keyframes marq { to { transform: translateX(-50%); } }
+@keyframes swbg { 0%, 12% { background: #3a3a40; } 18%, 92% { background: var(--red); } 100% { background: #3a3a40; } }
+@keyframes swknob { 0%, 12% { transform: translateX(0); } 18%, 92% { transform: translateX(22px); } 100% { transform: translateX(0); } }
+@keyframes tk { 0%, 26% { background: var(--red); color: #fff; } 33%, 100% { background: #EEEFF2; color: var(--ink); } }
+@keyframes tap {
+  0%, 60% { transform: scale(1); }
+  65% { transform: scale(.92); background: var(--red); border-color: var(--red); }
+  72%, 100% { transform: scale(1); }
+}
+.hero .wrap > div:first-child > * { animation: up .8s both; }
+.hero .wrap > div:first-child > *:nth-child(2) { animation-delay: .1s; }
+.hero .wrap > div:first-child > *:nth-child(3) { animation-delay: .2s; }
+.hero .wrap > div:first-child > *:nth-child(4) { animation-delay: .3s; }
+.hero .wrap > div:first-child > *:nth-child(5) { animation-delay: .4s; }
+@keyframes up { from { opacity: 0; transform: translateY(24px); } }
+.rv { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.rv.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .rv { opacity: 1 !important; transform: none !important; }
+  .hero h1 .u::after { transform: none; }
+  .tk:first-child { background: var(--red); color: #fff; }
+  .sw { background: var(--red); }
+  .sw::after { transform: translateX(22px); }
+}
