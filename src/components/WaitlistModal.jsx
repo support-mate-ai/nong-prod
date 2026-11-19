@@ -15,7 +15,7 @@ async function submitWaitlistToSupabase({ role, ...formValues }) {
   const payload = {
     role,
     full_name: formValues.fullName?.trim(),
-    email: formValues.email?.trim(),
+    email: formValues.email?.trim() || null,
     mobile_number: formValues.mobileNumber?.trim(),
     city: formValues.city?.trim(),
     salon_name: formValues.salonName?.trim() || null,
@@ -58,7 +58,7 @@ const formConfig = {
       ],
       [
         { name: 'salonName', label: 'Salon Name', placeholder: 'Your salon name', required: true, autoComplete: 'organization' },
-        { name: 'email', label: 'Email', placeholder: 'you@example.com', required: true, type: 'email', autoComplete: 'email' },
+        { name: 'email', label: 'Email (Optional)', placeholder: 'you@example.com', required: false, type: 'email', autoComplete: 'email' },
         { name: 'website', label: 'Salon Instagram / Website', placeholder: 'instagram.com/your-salon', required: false, type: 'text' },
       ],
     ],
@@ -70,7 +70,7 @@ const formConfig = {
     columns: [
       [
         { name: 'fullName', label: 'Full Name', placeholder: 'Your name', required: true, autoComplete: 'name' },
-        { name: 'email', label: 'Email', placeholder: 'you@example.com', required: true, type: 'email', autoComplete: 'email' },
+        { name: 'email', label: 'Email (Optional)', placeholder: 'you@example.com', required: false, type: 'email', autoComplete: 'email' },
         { name: 'salonName', label: 'Salon Name', placeholder: 'Your salon name', required: false, autoComplete: 'organization' },
       ],
       [

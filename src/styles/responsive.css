@@ -1,10 +1,15 @@
 @media (max-width: 900px) {
   .links { display: none; }
   section { padding-block: 68px; }
-  .hero .wrap, .how .wrap, .launch .wrap { grid-template-columns: 1fr; }
+  .how .wrap, .launch .wrap { grid-template-columns: 1fr; }
   .cards, .prov .grid, .models, .plans { grid-template-columns: 1fr; }
   .plan.pop { order: -1; }
   .subscription-head { align-items: flex-start; flex-direction: column; }
-  .stage { max-width: 380px; }
   .model p { min-height: 0; }
+}
+
+@media (max-width: 600px) {
+  nav { display: none; }
+  .landing-hero-top { top: max(10.5%, calc(env(safe-area-inset-top, 0px) + 32px)); }
+  .wait-timer { top: 16.5%; }
 }

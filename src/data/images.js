@@ -4,4 +4,5 @@ const base = import.meta.env.BASE_URL
 
 export const images = {
   logo: `${base}logo.png`,
+  landingSection: `${base}landing-section.jpeg`,
 }
