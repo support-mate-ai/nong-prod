@@ -31,12 +31,10 @@ nav .btn { padding: 10px 20px; font-size: 14px; }
 /* landing hero */
 .landing-hero {
   position: relative;
-  margin-inline: clamp(12px, 2vw, 28px);
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
   isolation: isolate;
-  border-radius: 20px;
   background: #250b0b;
   color: #fff;
 }
