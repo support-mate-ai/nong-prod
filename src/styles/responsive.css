@@ -13,6 +13,9 @@
   nav .btn { padding: 8px 14px; font-size: 13px; }
   .brand { gap: 8px; }
   .brand small { display: none; }
+  .landing-hero-copy {
+    bottom: calc(max(10.5%, env(safe-area-inset-bottom, 0px) + 32px) + 70px);
+  }
   .landing-hero-top { top: max(10.5%, calc(env(safe-area-inset-top, 0px) + 32px)); }
   .wait-timer { top: 16.5%; }
 }
@@ -34,10 +37,16 @@
   }
   .wait-timer-value { font-size: clamp(44px, 3.4vw, 56px); }
   .landing-hero-copy {
+    top: 50%;
+    bottom: auto;
+    left: clamp(24px, 2vw, 36px);
+    transform: translateY(-50%);
+  }
+  .landing-hero-bottom {
+    right: clamp(24px, 2vw, 36px);
     bottom: 4%;
     left: clamp(24px, 2vw, 36px);
   }
-  .landing-hero-bottom { margin-top: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

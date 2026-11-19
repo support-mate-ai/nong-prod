@@ -31,10 +31,12 @@ nav .btn { padding: 10px 20px; font-size: 14px; }
 /* landing hero */
 .landing-hero {
   position: relative;
+  margin-inline: clamp(12px, 2vw, 28px);
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
   isolation: isolate;
+  border-radius: 20px;
   background: #250b0b;
   color: #fff;
 }
@@ -119,6 +121,10 @@ nav .btn { padding: 10px 20px; font-size: 14px; }
   letter-spacing: .1em;
   text-transform: uppercase;
 }
+.landing-hero-content {
+  position: absolute;
+  inset: 0;
+}
 .landing-hero-copy {
   position: absolute;
   right: max(29px, env(safe-area-inset-right, 0px));
@@ -158,11 +164,15 @@ nav .btn { padding: 10px 20px; font-size: 14px; }
   line-height: 1.45;
 }
 .landing-hero-bottom {
+  position: absolute;
+  right: max(29px, env(safe-area-inset-right, 0px));
+  bottom: max(10.5%, calc(env(safe-area-inset-bottom, 0px) + 32px));
+  left: max(29px, env(safe-area-inset-left, 0px));
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  margin-top: 30px;
 }
 .landing-hero-next-label {
   color: rgba(255, 255, 255, .92);

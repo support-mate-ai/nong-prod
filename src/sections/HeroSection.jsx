@@ -12,10 +12,12 @@ export default function HeroSection() {
         <span className="wait-timer-value">30<small>min</small></span>
         <span className="wait-timer-caption">And counting...</span>
       </div>
-      <div className="landing-hero-copy">
-        <span className="landing-hero-eyebrow">Customer waiting</span>
-        <h1>Still<br /><span>waiting?</span></h1>
-        <p>Customers stand in line, lose patience and walk out — before the haircut even starts.</p>
+      <div className="landing-hero-content">
+        <div className="landing-hero-copy">
+          <span className="landing-hero-eyebrow">Customer waiting</span>
+          <h1>Still<br /><span>waiting?</span></h1>
+          <p>Customers stand in line, lose patience and walk out — before the haircut even starts.</p>
+        </div>
         <div className="landing-hero-bottom">
           <a className="landing-hero-next-label" href="#how">Swipe <span aria-hidden="true">→</span> The NonG Fix</a>
           <a className="landing-hero-next" href="#how" aria-label="See the NonG fix">
