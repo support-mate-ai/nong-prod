@@ -9,7 +9,37 @@
 }
 
 @media (max-width: 600px) {
-  nav { display: none; }
+  nav .wrap { gap: 12px; }
+  nav .btn { padding: 8px 14px; font-size: 13px; }
+  .brand { gap: 8px; }
+  .brand small { display: none; }
   .landing-hero-top { top: max(10.5%, calc(env(safe-area-inset-top, 0px) + 32px)); }
   .wait-timer { top: 16.5%; }
+}
+
+@media (min-width: 901px) {
+  .landing-hero {
+    height: 100svh;
+    min-height: 560px;
+  }
+  .landing-hero-top {
+    top: 4%;
+    left: clamp(24px, 2vw, 36px);
+    right: clamp(24px, 2vw, 36px);
+  }
+  .wait-timer {
+    top: 10%;
+    right: 22%;
+    width: clamp(150px, 10.5vw, 180px);
+  }
+  .wait-timer-value { font-size: clamp(44px, 3.4vw, 56px); }
+  .landing-hero-copy {
+    bottom: 4%;
+    left: clamp(24px, 2vw, 36px);
+  }
+  .landing-hero-bottom { margin-top: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav { transition: none; }
 }

@@ -1,7 +1,21 @@
 /* Page chrome: nav, hero, marquee, footer. */
 nav {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  right: 0;
+  left: 0;
+  z-index: 20;
   background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-110%);
+  transition: transform .35s ease, opacity .25s ease, visibility 0s linear .35s;
+}
+nav.nav-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
 }
 .safe-top-cover {
   position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: #fff;
